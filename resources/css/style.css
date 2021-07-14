@@ -19,10 +19,25 @@ html {
 #container_courses,
 footer {
     background-color: white;
+    color: #525252;
 }
 
 a {
     text-decoration: none;
+}
+
+a:hover {
+    color: mediumaquamarine;
+}
+
+h1 {
+    font-weight: 800;
+    font-size: 2.5rem;
+}
+
+h3 {
+    font-weight: 500;
+    font-size: 1.5rem;
 }
 
 /* Header/Navigation Bar */
@@ -78,11 +93,7 @@ li a {
     font-weight: 300;
 }
 
-li a:hover {
-    color: mediumaquamarine;
-}
-
-@media only screen and (max-width: 730px) {
+@media only screen and (max-width: 820px) {
     
     .desktop {
         display: none;
@@ -96,4 +107,77 @@ li a:hover {
         filter: invert(100%);
         width: 100%;
     }
+}
+
+
+/* 1st Section - Information */
+
+#container_learn {
+    position: relative;
+    top: 64px;
+    display: flex;
+    width: 100%;
+    height: auto;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#img_intro_container {
+    width: 60%;
+    overflow: 100%;
+    padding: 2rem 1.5rem;
+    min-width: 450px;
+}
+
+#img_intro {
+    max-width: 100%;
+    height: auto;
+}
+
+#intro_text {
+    padding-right: 1.5rem;
+}
+
+#intro_text h1 {
+    padding: 0 0 1rem 0;
+}
+
+#intro_text h3 {
+    padding: 0 0 1.5rem 0;
+}
+
+.button {
+    font-size: 1.2rem;
+    color: white;
+    background-color: cadetblue;
+    padding: 8px 120px;
+}
+
+.button:hover {
+    background-color: teal;
+}
+
+@media only screen and (max-width: 820px) {
+    
+    #container_learn {
+        flex-direction: column;
+    }
+
+    #img_intro_container {
+        width: 100%;
+        height: auto;
+        padding: 0 0 2rem 0;
+    }
+
+    #intro_text {
+        text-align: center;
+        padding-right: 0;
+        padding: 0rem 1.5rem 2rem;
+    }
+
+    #intro_text h1 {
+        padding: 0 0 2rem 0;
+    }
+
+
 }
