@@ -9,7 +9,6 @@ html {
 }
 
 #container_header,
-#container_info,
 #container_thesis {
     background-color: cadetblue;
     color: white;
@@ -24,6 +23,7 @@ footer {
 
 a {
     text-decoration: none;
+    color: seagreen;
 }
 
 a:hover {
@@ -35,10 +35,20 @@ h1 {
     font-size: 2.5rem;
 }
 
+h2 {
+    font-weight: 700;
+    font-size: 2rem;
+}
+
 h3 {
     font-weight: 500;
     font-size: 1.5rem;
 }
+
+p {
+    font-weight: 100;
+}
+
 
 /* Header/Navigation Bar */
 
@@ -109,12 +119,14 @@ li a {
     }
 }
 
+main {
+    position: relative;
+    top: 4rem;  
+}
 
-/* 1st Section - Information */
+/* 1st Section - Intro */
 
 #container_learn {
-    position: relative;
-    top: 64px;
     display: flex;
     width: 100%;
     height: auto;
@@ -139,11 +151,11 @@ li a {
 }
 
 #intro_text h1 {
-    padding: 0 0 1rem 0;
+    padding: 0 0 2rem 0;
 }
 
 #intro_text h3 {
-    padding: 0 0 1.5rem 0;
+    padding: 0 0 3rem 0;
 }
 
 .button {
@@ -176,8 +188,146 @@ li a {
     }
 
     #intro_text h1 {
-        padding: 0 0 2rem 0;
+        padding-bottom: 2rem;      
+    }
+
+    .button {
+        margin-bottom: 2rem;
     }
 
 
+}
+
+/* 2nd Section - Info */
+
+.mobile_info {
+    display: none;
+}
+
+.container_info {
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
+}
+
+.infoleft_container {
+    min-width: 60%;
+    max-width: 60%;
+    overflow: hidden;
+    background-color: cadetblue;
+    color: white;
+}
+
+.infoleft_container img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    padding: 2rem 1.5rem;
+}
+
+.text_practice * {
+    padding: 0 1.5rem 1.5rem;
+}
+
+#quote_name {
+    padding-bottom: 2rem;
+}
+
+.inforight_container {
+    display: flex;
+    max-width: 40%;
+    min-width: 40%;
+    justify-content: space-between;
+    align-content: center;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.box {
+    display: flex;
+    align-items: center;
+    border: solid rgba(68, 85, 85, 0.1) .5px;
+    padding-right: 1rem;
+    flex: 1;
+}
+
+.box figure {
+    width: 35%;
+    overflow: hidden;
+    height: auto;
+    padding-right: 1rem;
+}
+
+.box .desktop_info {
+    max-width: 100%;
+    display: block;
+    height: auto;
+    padding: 1rem 1rem;
+}
+
+#lecture_box {
+    background-color: lightgray;
+}
+
+#campus_box, #orientation_box {
+    background-color: rgb(180, 238, 230);
+}
+
+.box .text {
+    width: 65%;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.box .text * {
+    padding-bottom: 0.5rem;
+}
+
+@media only screen and (max-width: 820px) {
+
+    .infoleft_container {
+        display: none;
+    }
+
+    .box .desktop_info {
+        display: none;
+    }
+
+    .inforight_container {
+        max-width: 100%;
+        min-width: 100%;
+        align-items: center;
+    }
+
+    .box {
+        display: initial;
+        border: none;
+        padding: 1rem 1rem 4rem;
+    }
+
+    #lecture_box {
+        background-color: rgb(180, 238, 230);
+    }
+
+    .box .mobile_info {
+        display: initial;
+        max-width: 100%;
+        display: block;
+        height: auto;
+    }
+
+    .box .text {
+        padding-left: 1rem;
+        width: 100%;
+    }
+
+    .box figure {
+        width: 100%;
+        padding: 0 0 0 0;
+        margin: auto
+    }
+
+    .container_info {
+        background-color: rgb(180, 238, 230);
+    }
 }
