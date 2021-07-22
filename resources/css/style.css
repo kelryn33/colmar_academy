@@ -248,14 +248,20 @@ li a {
 
 .box {
     display: flex;
-    justify-content: flex-start;
+    align-content: space-around;
     border: solid rgba(68, 85, 85, 0.1) .5px;
-    padding-right: 1rem;
     flex: 1;
 }
 
 .box figure {
+    display: flex;
+    width: 100%;
     flex-basis: 35%;
+}
+
+.box a {
+    display: flex;
+    align-items: center;
 }
 
 #orientation_box .read, #campus_box .read, #lecture_box .read {
@@ -292,6 +298,7 @@ and if use this - image shrinks as box sizes
 
 .box .text {
     flex-basis: 65%;
+    padding-left: 1rem;
     color: #525252;
 }
 
