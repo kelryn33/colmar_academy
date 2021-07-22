@@ -242,13 +242,19 @@ li a {
 .inforight_container {
     display: flex;
     flex-basis: 40%;
+    justify-content: space-between;
     align-content: center;
     flex-direction: column;
     align-items: stretch;
 }
 
 .box {
+    display: flex;
+    justify-content: flex-start;
+    align-content: space-around;
     border: solid rgba(68, 85, 85, 0.1) .5px;
+    padding-right: 1rem;
+    flex: 1;
 }
 
 
@@ -280,10 +286,14 @@ and if use this - image shrinks as box sizes
     background-color: rgb(142, 224, 213);
 }
 
-.box figure {
-    flex-basis: 35%;
+
+.box .desktop_info {
+    max-width: 100%;
+    display: block;
+    height: auto;
     padding: 1rem 1rem;
 }
+
 
 #campus_box, #orientation_box, #lecture_box {
     background-color: rgb(180, 238, 230);
