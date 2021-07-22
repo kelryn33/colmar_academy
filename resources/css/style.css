@@ -391,6 +391,8 @@ and if use this - image shrinks as box sizes
     margin-bottom: 2rem;
 }
 
+
+
 .course_box img {
     display: block;
     width: 100%;
@@ -482,9 +484,22 @@ and if use this - image shrinks as box sizes
 }
 
 #thesis_urban {
-    width: 60%;
+    flex-basis: 60%;
     padding: 0 1.5rem 2rem;
 }
+
+
+.thesis_blocks a {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.thesis_blocks > a:hover {
+    background-color: rgb(142, 224, 213);
+}
+
 
 .vid video {
     width: 100%;
@@ -500,8 +515,7 @@ and if use this - image shrinks as box sizes
 
 .thesis_mobile {
     display: flex;
-    max-width: 40%;
-    min-width: 40%;
+    flex-basis: 40%;
     justify-content: space-between;
     align-content: center;
     flex-direction: column;
@@ -512,19 +526,18 @@ and if use this - image shrinks as box sizes
     display: flex;
     align-items: center;
     border: solid rgba(68, 85, 85, 0.1) .5px;
-    padding: 1rem 0 1rem 1rem;
     flex: 1;
     background-color: rgb(180, 238, 230);
 }
 
 .thesis_blocks figure img {
-    width: 100%;
+    flex-basis: 35%;    
+    padding: 1rem 0 1rem 1rem;
 }
 
 .thesis_text {
-    width: 65%;
+    flex-basis: 65%;
     color: #525252;
-    margin: auto 0;
     padding-left: 1rem;
     padding-right: 1rem;
 }
@@ -547,8 +560,12 @@ and if use this - image shrinks as box sizes
     }
 
     #thesis_urban {
-        width: 100%;
+        flex-basis: 100%;
         padding: 0 0 1.5rem 0;
+    }
+
+    .thesis_mobile {
+        flex-basis: 0%;
     }
 }
 
