@@ -253,7 +253,6 @@ li a {
     justify-content: flex-start;
     align-content: space-around;
     border: solid rgba(68, 85, 85, 0.1) .5px;
-    padding-right: 1rem;
     flex: 1;
 }
 
