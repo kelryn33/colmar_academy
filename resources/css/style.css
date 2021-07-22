@@ -216,8 +216,7 @@ li a {
 }
 
 .infoleft_container {
-    min-width: 60%;
-    max-width: 60%;
+    flex-basis: 60%;
     overflow: hidden;
     background-color: cadetblue;
     color: white;
@@ -240,8 +239,7 @@ li a {
 
 .inforight_container {
     display: flex;
-    max-width: 40%;
-    min-width: 40%;
+    flex-basis: 40%;
     justify-content: space-between;
     align-content: center;
     flex-direction: column;
@@ -250,10 +248,19 @@ li a {
 
 .box {
     display: flex;
-    align-items: center;
+    justify-content: flex-start;
     border: solid rgba(68, 85, 85, 0.1) .5px;
     padding-right: 1rem;
     flex: 1;
+}
+
+.box figure {
+    flex-basis: 35%;
+}
+
+#orientation_box .read, #campus_box .read, #lecture_box .read {
+    font-weight: 500;
+    color: seagreen;
 }
 
 /*  was trying to make 35% but don't need this since set text??
@@ -269,7 +276,7 @@ and if use this - image shrinks as box sizes
 
 
 .flex-parent > a:hover {
-    background-color: red;
+    background-color: rgb(142, 224, 213);
 }
 
 .box .desktop_info {
@@ -284,7 +291,7 @@ and if use this - image shrinks as box sizes
 }
 
 .box .text {
-    width: 65%;
+    flex-basis: 65%;
     color: #525252;
 }
 
@@ -376,7 +383,8 @@ and if use this - image shrinks as box sizes
 }
 
 .course_box img {
-    max-width: 100%;
+    display: block;
+    width: 100%;
     height: auto;
 }
 
